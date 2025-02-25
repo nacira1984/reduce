@@ -308,7 +308,7 @@ def xu_and_wei_cr(matrix, lambd, threshold):
         Tuple[np.ndarray, float, float]: The new matrix after reduction, CI and CR.
     """
     tmp_mac = matrix
-    matrix_size = int(math.sqrt(len(tmp_mac)))
+    matrix_size = len(tmp_mac)
 
     ci = (return_max_eigenvalue(tmp_mac) - matrix_size) / (matrix_size - 1)
     ri = return_ri(matrix_size)
@@ -344,7 +344,7 @@ def cao_cr(matrix, lambd, threshold):
         Tuple[np.ndarray, float, float]: The new matrix after reduction, CI and CR.
     """
     tmp_mac = matrix
-    matrix_size = int(math.sqrt(len(tmp_mac)))
+    matrix_size = len(tmp_mac)
 
     ci = (return_max_eigenvalue(tmp_mac) - matrix_size) / (matrix_size - 1)
     ri = return_ri(matrix_size)
@@ -380,7 +380,7 @@ def szybowski_cr(matrix, threshold):
         Tuple[np.ndarray, float, float]: The new matrix after reduction, CI and CR.
     """
     tmp_mac = matrix
-    matrix_size = int(math.sqrt(len(tmp_mac)))
+    matrix_size = len(tmp_mac)
 
     ci = (return_max_eigenvalue(tmp_mac) - matrix_size) / (matrix_size - 1)
     ri = return_ri(matrix_size)
